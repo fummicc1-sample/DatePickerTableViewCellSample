@@ -31,11 +31,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, TableViewC
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! TableViewCell
         cell.delegate = self
         
-        if isExpandArray[indexPath.row] == true {
+        let isExpand = isExpandArray[indexPath.row]
+        
+        if isExpand {
             cell.datePicker.isHidden = false
         } else {
             cell.datePicker.isHidden = true
         }
+        
+        let buttonTitle: String
+        if isExpand {
+            buttonTitle = "Collapse"
+        } else {
+            buttonTitle = "Expand"
+        }
+        cell.button.setTitle(buttonTitle, for: .normal)
         
         return cell
     }

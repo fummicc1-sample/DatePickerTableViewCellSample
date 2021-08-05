@@ -14,6 +14,7 @@ protocol TableViewCellDelegate: AnyObject {
 class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var button: UIButton!
     
     weak var delegate: TableViewCellDelegate?
     

@@ -52,6 +52,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="button" destination="Cf5-A1-odi" id="xvB-ye-XwA"/>
                                             <outlet property="datePicker" destination="dXg-ug-IPb" id="QTq-Cg-BmQ"/>
                                         </connections>
                                     </tableViewCell>
