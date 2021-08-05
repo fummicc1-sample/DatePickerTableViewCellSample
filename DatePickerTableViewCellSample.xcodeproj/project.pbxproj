@@ -13,6 +13,7 @@
 		D3DC279B26BB7522005C4AF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DC279926BB7522005C4AF9 /* Main.storyboard */; };
 		D3DC279D26BB7523005C4AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DC279C26BB7523005C4AF9 /* Assets.xcassets */; };
 		D3DC27A026BB7523005C4AF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DC279E26BB7523005C4AF9 /* LaunchScreen.storyboard */; };
+		D3DC27A826BB75F1005C4AF9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC27A726BB75F1005C4AF9 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D3DC279C26BB7523005C4AF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3DC279F26BB7523005C4AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3DC27A126BB7523005C4AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3DC27A726BB75F1005C4AF9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D3DC279C26BB7523005C4AF9 /* Assets.xcassets */,
 				D3DC279E26BB7523005C4AF9 /* LaunchScreen.storyboard */,
 				D3DC27A126BB7523005C4AF9 /* Info.plist */,
+				D3DC27A726BB75F1005C4AF9 /* TableViewCell.swift */,
 			);
 			path = DatePickerTableViewCellSample;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3DC279826BB7522005C4AF9 /* ViewController.swift in Sources */,
+				D3DC27A826BB75F1005C4AF9 /* TableViewCell.swift in Sources */,
 				D3DC279426BB7522005C4AF9 /* AppDelegate.swift in Sources */,
 				D3DC279626BB7522005C4AF9 /* SceneDelegate.swift in Sources */,
 			);

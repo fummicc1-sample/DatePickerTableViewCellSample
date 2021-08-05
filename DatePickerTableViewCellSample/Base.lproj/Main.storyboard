@@ -1,24 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatePickerTableViewCellSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7hf-rE-LQD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="558" id="Ldx-Nz-XSq" customClass="TableViewCell" customModule="DatePickerTableViewCellSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="558"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ldx-Nz-XSq" id="nXa-6g-Jef">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="558"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Xk9-sB-wfH">
+                                                    <rect key="frame" x="8" y="16" width="398" height="526"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cf5-A1-odi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
+                                                            <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                                            <state key="normal" title="Expand"/>
+                                                            <connections>
+                                                                <action selector="tapActionButton" destination="Ldx-Nz-XSq" eventType="touchUpInside" id="Q9Z-CN-QZg"/>
+                                                            </connections>
+                                                        </button>
+                                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="dXg-ug-IPb">
+                                                            <rect key="frame" x="0.0" y="58" width="398" height="468"/>
+                                                        </datePicker>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xk9-sB-wfH" firstAttribute="leading" secondItem="nXa-6g-Jef" secondAttribute="leading" constant="8" id="B2g-M2-ZAT"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xk9-sB-wfH" secondAttribute="bottom" constant="16" id="VCt-6K-Tm1"/>
+                                                <constraint firstItem="Xk9-sB-wfH" firstAttribute="top" secondItem="nXa-6g-Jef" secondAttribute="top" constant="16" id="hr2-cu-1Iq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xk9-sB-wfH" secondAttribute="trailing" constant="8" id="jVr-zo-WVh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="datePicker" destination="dXg-ug-IPb" id="QTq-Cg-BmQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7hf-rE-LQD" secondAttribute="bottom" id="7xB-IM-MHN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7hf-rE-LQD" secondAttribute="trailing" id="NCa-TW-aiv"/>
+                            <constraint firstItem="7hf-rE-LQD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pcf-Wk-Ik5"/>
+                            <constraint firstItem="7hf-rE-LQD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WrN-M6-LMW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="7hf-rE-LQD" id="GOg-Ao-0RE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
